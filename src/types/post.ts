@@ -1,6 +1,6 @@
 import { Author } from "./author";
 
-export type PostFrontmatter = {
+export type PostMetadata = {
   /**
    * Post title
    * example: title: 'Introducing Tailwind Nexjs Starter Blog'
@@ -66,11 +66,13 @@ export type PostFrontmatter = {
   slug: string;
 
   fileName: string;
+
+  readingTime?: any;
 }
 
 
 export type MdxDataSource = {
   mdxSource: string;
-  frontMatter: PostFrontmatter;
+  frontMatter: PostMetadata;
   toc: any;
 }

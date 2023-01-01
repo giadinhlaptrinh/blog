@@ -33,6 +33,15 @@ module.exports = {
         primary: colors.teal,
         gray: colors.neutral,
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "0",
+          lg: "1rem",
+          xl: "2.5rem",
+          "2xl": "6rem",
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

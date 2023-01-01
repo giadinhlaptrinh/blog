@@ -4,7 +4,7 @@ import SocialIcon from "@/components/social-icons";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="border-t border-gray-200 dark:border-slate-700">
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
           <SocialIcon
@@ -21,16 +21,17 @@ export default function Footer() {
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" /> 
           */}
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>Made with ❤️ by {siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/">{siteMetadata.title}</Link>
+        <div className="mb-4 md:flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div className="mb-2">Made with ❤️ by {siteMetadata.author}</div>
+          <div className="hidden md-block">{` • `}</div>
+          <div>
+            <span>{`© ${new Date().getFullYear()} `}</span>
+            <Link href="/">{siteMetadata.title}</Link>
+          </div>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/giadinhlaptrinh">
-            Next.js Starter Blog with Tailwind and Typescript
+          <Link href="https://github.com/giadinhlaptrinh/blog">
+            Next JS Blog with Tailwind and Typescript
           </Link>
         </div>
       </div>

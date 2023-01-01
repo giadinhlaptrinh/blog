@@ -4,7 +4,6 @@ const siteMetadata: SiteMetadata = {
   title: 'Gia đình Lập Trình',
   siteName: 'Gia đình Lập Trình',
   author: 'truonghungit',
-  headerTitle: 'Gia đình Lập Trình',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light

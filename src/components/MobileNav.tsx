@@ -21,7 +21,7 @@ const MobileNav = () => {
     <div className="sm:hidden">
       <button
         type="button"
-        className="ml-1 mr-1 h-8 w-8 rounded py-1"
+        className="flex ml-1 mr-1 h-8 w-20 rounded py-1 justify-between items-center"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -29,7 +29,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="text-gray-900 dark:text-gray-100"
+          className="h-8 text-gray-900 dark:text-gray-100 flex-shrink-0"
         >
           <path
             fillRule="evenodd"
@@ -37,10 +37,13 @@ const MobileNav = () => {
             clipRule="evenodd"
           />
         </svg>
+        <span className="text-gray-900 dark:text-gray-100 font-semibold uppercase">
+          Menu
+        </span>
       </button>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
-          navShow ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 z-10 h-full w-full shadow-md transform bg-gray-50 opacity-95 duration-300 ease-in-out dark:bg-gray-800 ${
+          navShow ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-end">
