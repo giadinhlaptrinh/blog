@@ -31,8 +31,8 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         description={siteMetadata.description}
       />
 
-      <div className="container py-16">
-        <div>
+      <div className="container py-10">
+        <div className="px-4">
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 gap-y-10 md:gap-y-12 ">
             {!posts.length && "No posts found."}
             {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {

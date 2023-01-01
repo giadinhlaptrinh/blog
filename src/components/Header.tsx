@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between py-8 md:py-10 border-b border-gray-200 dark:border-slate-700">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="px-4 flex items-center justify-between">
           <MobileNav />
           <Link href="/" aria-label={siteMetadata.siteName}>
             <div className="flex items-center justify-between">

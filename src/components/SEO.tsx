@@ -57,7 +57,7 @@ const CommonSEO = ({
         content={`${siteMetadata.siteUrl}${router.asPath}`}
       />
       <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={siteMetadata.title} />
+      <meta property="og:site_name" content={siteMetadata.siteName} />
       <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
       {Array.isArray(ogImage) ? (

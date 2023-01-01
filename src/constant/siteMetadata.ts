@@ -1,17 +1,17 @@
 import { SiteMetadata } from "@/types/site-metadata";
 
 const siteMetadata: SiteMetadata = {
-  title: 'Gia đình Lập Trình',
+  title: 'Gia đình Lập Trình - Chia sẻ kiến thức lập trình',
   siteName: 'Gia đình Lập Trình',
   author: 'truonghungit',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'Gia đình lập trình - Chia sẻ kiến thức lập trình',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://giadinhlaptrinh.com',
   siteRepo: 'https://github.com/giadinhlaptrinh',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/social-banner.png',
   email: 'truonghungit@gmail.com',
   github: 'https://github.com/giadinhlaptrinh',
   twitter: 'https://twitter.com/Twitter',

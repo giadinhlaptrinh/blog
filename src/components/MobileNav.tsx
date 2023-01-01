@@ -21,7 +21,7 @@ const MobileNav = () => {
     <div className="sm:hidden">
       <button
         type="button"
-        className="flex ml-1 mr-1 h-8 w-20 rounded py-1 justify-between items-center"
+        className="flex h-8 w-20 rounded py-1 justify-between items-center"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
