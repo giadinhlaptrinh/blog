@@ -1,6 +1,7 @@
 import siteMetadata from "@/constant/siteMetadata";
 import headerNavLinks from "@/constant/headerNavLinks";
 
+import Logo from "@/data/logo.svg";
 import Link from "./Link";
 import MobileNav from "./MobileNav";
 import ThemeSwitch from "./ThemeSwitch";
@@ -13,10 +14,10 @@ export default function Header() {
           <MobileNav />
           <Link href="/" aria-label={siteMetadata.siteName}>
             <div className="flex items-center justify-between">
-              {/* <div className="mr-3">
-                <Logo />
-              </div> */}
-              <div className="hidden sm:block text-3xl font-semibold">
+              <div className="mr-3">
+                <Logo className="h6" />
+              </div>
+              <div className="hidden sm:block text-2xl font-semibold">
                 {siteMetadata.siteName}
               </div>
             </div>
@@ -43,7 +44,7 @@ export default function Header() {
             {/* <div className="mr-3">
                 <Logo />
               </div> */}
-            <div className="text-3xl font-semibold">
+            <div className="text-2xl font-semibold">
               {siteMetadata.siteName}
             </div>
           </Link>

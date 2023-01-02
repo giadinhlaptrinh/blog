@@ -1,3 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="344.5639097744361 330.27819548872174 111.73684210526318 91.21804511278197" width="53.87" height="43.61"><defs><path d="M453.3 331.28L453.3 359.85L388.64 418.5L388.64 388.42L453.3 331.28Z" id="aFZf6T5ED"></path><linearGradient id="gradientb2ThqnP5Op" gradientUnits="userSpaceOnUse" x1="420.97" y1="331.28" x2="420.97" y2="418.5"><stop style="stop-color: #06b6d4;stop-opacity: 1" offset="0%"></stop><stop style="stop-color: #67e8f9;stop-opacity: 1" offset="100%"></stop></linearGradient><path d="M410.23 331.28L410.23 359.85L345.56 418.5L345.56 388.42L410.23 331.28Z" id="a9fehgwfM"></path><linearGradient id="gradientk1wNV9Ostb" gradientUnits="userSpaceOnUse" x1="377.89" y1="331.28" x2="377.89" y2="418.5"><stop style="stop-color: #06b6d4;stop-opacity: 1" offset="0%"></stop><stop style="stop-color: #67e8f9;stop-opacity: 1" offset="100%"></stop></linearGradient></defs><g><g><use xlink:href="#aFZf6T5ED" opacity="1" fill="url(#gradientb2ThqnP5Op)"></use></g><g><use xlink:href="#a9fehgwfM" opacity="1" fill="url(#gradientk1wNV9Ostb)"></use></g></g></svg>
+<svg width="40" height="40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="400" rx="40" fill="#1098FF"/>
+<circle cx="110" cy="80" r="20" fill="white"/>
+<path d="M46 186C46 226.843 62.225 266.014 91.1056 294.894C119.986 323.775 159.157 340 200 340C240.843 340 280.014 323.775 308.894 294.894C337.775 266.014 354 226.843 354 186L313.979 186C313.979 216.229 301.971 245.22 280.595 266.595C259.22 287.971 230.229 299.979 200 299.979C169.771 299.979 140.78 287.971 119.405 266.595C98.0293 245.22 86.0208 216.229 86.0208 186L46 186Z" fill="white"/>
+<circle cx="66" cy="187" r="20" fill="white"/>
+<circle cx="334" cy="184" r="20" fill="white"/>
+<circle cx="280" cy="184" r="20" fill="white"/>
+<rect x="280" y="164" width="55" height="40" fill="white"/>
+<circle cx="220" cy="80" r="20" fill="white"/>
+<circle cx="290" cy="80" r="20" fill="white"/>
+<rect x="220" y="60" width="70" height="40" fill="white"/>
+</svg>
