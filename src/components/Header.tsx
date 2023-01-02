@@ -16,7 +16,7 @@ export default function Header() {
               {/* <div className="mr-3">
                 <Logo />
               </div> */}
-              <div className="hidden sm:block h-6 text-3xl font-semibold">
+              <div className="hidden sm:block text-3xl font-semibold">
                 {siteMetadata.siteName}
               </div>
             </div>
