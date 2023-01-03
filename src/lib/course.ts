@@ -5,6 +5,21 @@ import { Course, CourseMetadata, CourseSection, LessonMetadata, SectionMetadata 
 import getAllFilesRecursively from "./utils/files";
 import matter from "gray-matter";
 import { formatSlug } from "./mdx";
+import { bundleMDX } from "mdx-bundler";
+import remarkExtractFrontmatter from "./remark-extract-frontmatter";
+import remarkTocHeadings from "./remark-toc-headings";
+import remarkGfm from "remark-gfm";
+import remarkCodeTitles from "./remark-code-title";
+import remarkFootnotes from "remark-footnotes";
+import remarkMath from "remark-math";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeCitation from "rehype-citation";
+import rehypeKatex from "rehype-katex";
+import rehypePrismPlus from 'rehype-prism-plus';
+import rehypePresetMinify from "rehype-preset-minify";
+import rehypeSlug from "rehype-slug";
+import remarkImgToJsx from "./remark-img-to-jsx";
+import readingTime from "reading-time";
 
 const root = process.cwd();
 
@@ -116,7 +131,82 @@ export function getCourseDetail(course: string): Course {
   };
 }
 
-export function getLesson(course: string, section: string, slug: string) {
-  return {}
+export async function getLesson(courseSlug: string, sectionSlug: string, lessonSlug: string) {
+  const course = getCourseDetail(courseSlug);
+  const section = course.sections.find(s => s.slug === sectionSlug);
+  const lesson = section?.lessons.find(s => s.slug === lessonSlug);
+
+  if (!lesson) {
+    return null
+  }
+
+  const mdxPath = path.join(root, 'data', ...lesson.path);
+
+  const source = fs.readFileSync(mdxPath, 'utf8');
+
+
+  console.log("source", source);
+
+  // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
+  if (process.platform === 'win32') {
+    process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'esbuild.exe')
+  } else {
+    process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'bin', 'esbuild')
+  }
+
+  // TODO: remove any
+  let toc: any = []
+
+  const { code, frontmatter } = await bundleMDX({
+    source,
+    // mdx imports can be automatically source from the src/components directory
+    cwd: path.join(root, 'src/components'),
+    mdxOptions: (options, frontmatter) => {
+      // this is the recommended way to add custom remark/rehype plugins:
+      // The syntax might look weird, but it protects you in case we add/remove
+      // plugins in the future.
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
+        remarkExtractFrontmatter,
+        [remarkTocHeadings, { exportRef: toc }],
+        remarkGfm,
+        remarkCodeTitles,
+        [remarkFootnotes, { inlineNotes: true }],
+        remarkMath,
+        remarkImgToJsx,
+      ]
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        rehypeSlug,
+        rehypeAutolinkHeadings,
+        rehypeKatex,
+        [rehypeCitation, { path: path.join(root, 'data') }],
+        [rehypePrismPlus, { ignoreMissing: true }],
+        rehypePresetMinify,
+      ]
+      return options
+    },
+    esbuildOptions: (options) => {
+      options.loader = {
+        ...options.loader,
+        '.js': 'jsx',
+      };
+
+      // console.log("target", options.target);
+
+      // options.target = ["es2020"];
+
+      return options
+    },
+  });
+
+  return {
+    mdxSource: code,
+    toc,
+    ...frontmatter,
+    frontMatter: {
+      ...frontmatter
+    }
+  };
 
 }

@@ -5,7 +5,7 @@ import { CourseLesson } from "@/types/course";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
-const DEFAULT_LAYOUT = "PostLayout";
+const COURSE_LESSON_LAYOUT = "LessonLayout";
 export interface LessonPageProps {
   lesson: CourseLesson;
 }
@@ -56,6 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const LessonPage: NextPage<LessonPageProps> = ({ lesson }) => {
+  console.log("lesson", lesson);
   const { mdxSource, toc, frontMatter } = lesson as any;
   return (
     <>
@@ -64,7 +65,7 @@ const LessonPage: NextPage<LessonPageProps> = ({ lesson }) => {
           toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          layout={COURSE_LESSON_LAYOUT}
         />
       </>
     </>

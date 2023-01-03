@@ -10,7 +10,7 @@ Có rất nhiều cách khác nhau để sử dụng Git. Có thể sử dụng 
 
 Vì vậy, chúng ta cần biết biết cách mở Terminal trong macOS hoặc Command Prompt hoặc PowerShell trong Windows.
 
-![Image](./images/lessons/02-starting-to-use-git/cmd.png)
+![Image](/static/images/lessons/learn-git/02-starting-to-use-git/cmd.png)
 
 > Các bạn có thể tìm thấy và download các GUI ở đây
 >

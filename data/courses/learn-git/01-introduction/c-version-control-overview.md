@@ -20,7 +20,7 @@ Bạn còn nhớ phương pháp chúng ta đã làm trong phần trước, đó 
 
 Để giải quyết vấn đề này, chúng ta có các VCS cục bộ có cơ sở dữ liệu đơn giản lưu giữ tất cả các sự thay đổi của file.
 
-![Image](./images/lessons/01-introduction/local-vcs.png)
+![Image](/static/images/lessons/learn-git/01-introduction/local-vcs.png)
 *Sơ đồ làm việc của hệ thống LVCS*
 
 Một trong những công cụ VCS phổ biến nhất là một hệ thống có tên RCS, vẫn được sử dụng trong nhiều máy tính ngày nay.
@@ -31,7 +31,7 @@ Vấn đề lớn tiếp theo mà chúng ta gặp phải là cần hợp tác v�
 
 Các hệ thống này (chẳng hạn như CVS, Subversion và Perforce) có một server duy nhất chứa tất cả các files và một số máy client truy cập trực tiếp đến server. 
 
-![Image](./images/lessons/01-introduction/central-vcs.png)
+![Image](/static/images/lessons/learn-git/01-introduction/central-vcs.png)
 *Sơ đồ làm việc của hệ thống CVCS*
 
 **CVCS** mang lại nhiều lợi thế so với các VCS local. Ví dụ: 
@@ -49,11 +49,11 @@ Tuy nhiên, **CVCS** cũng có một số nhược điểm lớn.
 > 💡 Nếu bạn chỉ lưu giữ dữ liệu ở 1 nơi duy nhất, bạn có nguy cơ mất tất cả.
 
 
-![Image](./images/lessons/01-introduction/cvs.png)
+![Image](/static/images/lessons/learn-git/01-introduction/cvs.png)
 *Concurrent Versions System (CVS)*
 
 
-![Image](./images/lessons/01-introduction/svn.png)
+![Image](/static/images/lessons/learn-git/01-introduction/svn.png)
 *Apache Subversion (SVN)*
 
 ## Distributed version control
@@ -63,7 +63,7 @@ Do đó, nếu bất kỳ server nào chết và các hệ thống này đang c�
 
 Hơn nữa, nhiều hệ thống trong số này xử lý khá tốt với việc có một số kho lưu trữ từ xa mà chúng có thể làm việc cùng, vì vậy bạn có thể cộng tác đồng thời với các nhóm người khác nhau theo những cách khác nhau trong cùng một dự án. Điều này cho phép bạn thiết lập một số loại quy trình công việc không thể thực hiện được trong các hệ thống tập trung, chẳng hạn như mô hình phân cấp.
 
-![Image](./images/lessons/01-introduction/distributed-vcs.png)
+![Image](/static/images/lessons/learn-git/01-introduction/distributed-vcs.png)
 *Sơ đồ làm việc của hệ thống DVCS*
 
 Như bạn có thể thấy trong sơ đồ trên, mỗi lập trình viên tự duy trì một kho lưu trữ cục bộ, đây thực sự là bản sao hoặc bản sao được nhân bản từ kho lưu trữ trung tâm về trên ổ cứng của họ. Họ có thể cam kết (commit) và cập nhật (update) kho lưu trữ cục bộ của mình mà không có sự can thiệp nào.

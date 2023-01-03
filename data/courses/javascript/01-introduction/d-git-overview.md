@@ -48,7 +48,7 @@ Bây giờ bạn đã biết Git là gì, bạn nên biết Git là một phần
 Git thúc đẩy giao tiếp giữa các developer và giúp họ trao đổi thông tin, chia sẻ công việc để cùng hoạt động, tham gia trong toàn bộ vòng đời phát triển ứng dụng, từ thiết kế cho đến quá trình phát triển đến hỗ trợ sản xuất.
 
 
-![Image](./images/lessons/01-introduction/sdlc.png)
+![Image](./images/lessons/learn-git/01-introduction/sdlc.png)
 *Sơ đồ vòng đời cơ bản của quá trình phát triển phần mềm*
 
 Sơ đồ trên cho thấy toàn bộ vòng đời của việc phát triển phần mềm bắt đầu từ việc lập kế hoạch dự án đến phân tích và phát triển. Git đóng một vai trò quan trọng khi nói đến việc quản lý source code của developer.
@@ -56,7 +56,7 @@ Sơ đồ trên cho thấy toàn bộ vòng đời của việc phát triển ph
 
 Trong 10 năm trở lại đây, Git đã trở nên phổ biến hơn rất nhiều so với các công cụ kiểm soát phiên bản khác như Apache Subversion (SVN), Mercurial, v.v. Bạn có thể so sánh sự quan tâm của mọi người với Git theo thời gian với các công cụ kiểm soát phiên bản khác thông qua biểu đồ được thu thập từ [Google Trends](https://trends.google.com.vn/trends) bên dưới:
 
-![Image](./images/lessons/01-introduction/google-trend.png)
+![Image](./images/lessons/learn-git/01-introduction/google-trend.png)
 
 Trong các công ty lớn, các sản phẩm phần mềm thường được phát triển bởi các developer ở khắp nơi trên thế giới. Để kết nối và thực hiện giao tiếp giữa họ, Git là giải pháp hoàn hảo nhất.
 

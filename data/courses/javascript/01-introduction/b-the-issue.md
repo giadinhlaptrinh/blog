@@ -2,7 +2,7 @@
 title: "Vấn đề mà chúng ta đang gặp phải"
 ---
 
-![Image](./images/lessons/01-introduction/issue.png)
+![Image](./images/lessons/learn-git/01-introduction/issue.png)
 
 > Trong quá trình phát triển phần mềm, sau một thời gian, mã nguồn chương trình sẽ ngày càng nhiều. Khi muốn quay trở lại những phiên bản trước khi chỉnh sửa thì mọi người sẽ làm như thế nào?
 
@@ -15,7 +15,7 @@ Hơn nữa, trường hợp đặt tên một cách vô trật tự thì sẽ kh
 
 Ngoài ra, trường hợp làm việc trong một nhóm, nếu có hai người chỉnh sửa cùng lúc 1 file, thì sẽ xảy ra trường hợp xóa mất nội dung thay đổi của người đã chỉnh sửa trước đó. Dẫn đến nhiều khó khăn trong việc phân chia công việc, tổng hợp source codes khi hợp tác làm việc giữa nhiều thành viên trong team.
 
-![Image](./images/lessons/01-introduction/share-code-with-team.png)
+![Image](./images/lessons/learn-git/01-introduction/share-code-with-team.png)
 *Nội dung bị conflict khi 2 người cùng chỉnh sửa trên cùng 1 file*
 
 

@@ -7,16 +7,15 @@ import Pre from "./Pre";
 import { BlogNewsletterForm } from "./NewsletterForm";
 
 import AuthorLayout from "@/layouts/AuthorLayout";
+import LessonLayout from "@/layouts/LessonLayout";
 import PostLayout from "@/layouts/PostLayout";
 import PostSimple from "@/layouts/PostSimple";
 
-const layouts = {
-  AuthorLayout: AuthorLayout,
-  PostLayout: PostLayout,
-  PostSimple: PostSimple,
-};
-
-type MDXRendererLayout = "AuthorLayout" | "PostLayout" | "PostSimple";
+type MDXRendererLayout =
+  | "AuthorLayout"
+  | "PostLayout"
+  | "PostSimple"
+  | "LessonLayout";
 
 export interface MDXRendererProps {
   layout: MDXRendererLayout;
@@ -36,6 +35,9 @@ const MDXRendererWrapper = ({ layout, ...rest }: any) => {
   switch (layout) {
     case "AuthorLayout":
       return <AuthorLayout {...rest} />;
+
+    case "LessonLayout":
+      return <LessonLayout {...rest} />;
 
     case "PostLayout":
       return <PostLayout {...rest} />;
