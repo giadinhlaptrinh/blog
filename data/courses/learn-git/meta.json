@@ -1,5 +1,6 @@
 {
-  "title": "Khóa học Git",
-  "description": "Khoa hoc Git",
+  "title": "Khóa học Git từ cơ bản đến nâng cao",
+  "shortDescription": "Mo tả ngan gọn về khóa học.",
+  "description": "Git được sử dụng trên toàn thế giới để giúp các nhà phát triển theo dõi các thay đổi khi làm việc trên các phần khác nhau của cùng một dự án. GitHub là một ứng dụng web có thể tích hợp với Git. Cùng với nhau, người dùng có thể lưu trữ, tổ chức, khám phá và cộng tác viết mã với các nhóm và cộng đồng nhà phát triển rộng lớn hơn. Khóa học này giới thiệu cho bạn về Git và GitHub — và cách chúng phối hợp với nhau khi bạn xây dựng dự án.",
   "image": "/static/images/time-machine.jpg"
 }

@@ -1,52 +1,122 @@
-import fs from "fs";
+import fs, { lstatSync } from "fs";
 import path from "path";
 
-import { Course } from "@/types/course";
+import { Course, CourseMetadata, CourseSection, LessonMetadata, SectionMetadata } from "@/types/course";
 import getAllFilesRecursively from "./utils/files";
 import matter from "gray-matter";
 import { formatSlug } from "./mdx";
 
 const root = process.cwd();
 
-export async function getAllCourses(): Promise<Array<Course>> {
+export function getCourseMetadata(course: string): CourseMetadata {
+  const coursesPath = path.join(root, 'data', "courses", course);
+  const rowContent = fs.readFileSync(path.join(coursesPath, "meta.json"), 'utf8');
+
+  const meta = JSON.parse(rowContent.toString());
+
+  return meta;
+}
+
+export function getSectionMetadata(course: string, section: string): SectionMetadata {
+  const coursesPath = path.join(root, 'data', "courses", course, section);
+  const rowContent = fs.readFileSync(path.join(coursesPath, "meta.json"), 'utf8');
+
+  const meta = JSON.parse(rowContent.toString());
+
+  return meta;
+}
+
+export function getAllCourses(): Array<Course> {
   const coursesPath = path.join(root, 'data', "courses");
   const files = fs.readdirSync(coursesPath);
 
   return files.map((file) => {
-    const rowContent = fs.readFileSync(path.join(coursesPath, file, "meta.json"), 'utf8');
+    const meta = getCourseMetadata(file);
 
-    const meta = JSON.parse(rowContent.toString());
     return {
-      slug: `/courses/${file}`,
-      ...meta
+      slug: formatSlug(file),
+      fullSlug: `/courses/${formatSlug(file)}`,
+      path: ['courses', file],
+      sections: [],
+      ...meta,
     };
   })
 }
 
-export async function getCourseFrontMatter(course: string) {
-  const prefixPaths = path.join(root, 'data', 'courses', course)
+export function getAllCourseSections(course: string): Array<CourseSection> {
+  const coursesPath = path.join(root, 'data', "courses", course);
+  const files = fs.readdirSync(coursesPath);
 
-  const files = getAllFilesRecursively(prefixPaths)
+  return files
+    .filter((file) => {
+      const dirStats = lstatSync(path.join(coursesPath, file));
+      return dirStats.isDirectory();
+    })
+    .map((file) => {
+      const meta = getSectionMetadata(course, file);
 
-  const allFrontMatter: Array<any> = []
+      const slugParts = file.split("-");
+      const order = parseInt(slugParts.shift() || '0') || 0;
 
-  files.forEach((file) => {
-    // Replace is needed to work on Windows
-    const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/')
-    // Remove Unexpected File
-    if (path.extname(fileName) !== '.md' && path.extname(fileName) !== '.mdx') {
-      return
-    }
-    const source = fs.readFileSync(file, 'utf8')
-    const { data: frontmatter } = matter(source)
-    if (frontmatter.draft !== true) {
-      allFrontMatter.push({
-        ...frontmatter,
-        slug: formatSlug(fileName),
-        date: frontmatter.date ? new Date(frontmatter.date).toISOString() : null,
+      return {
+        slug: slugParts.join('-'),
+        fullSlug: `/courses/${course}/${slugParts.join('-')}`,
+        path: ['courses', course, file],
+        order,
+        lessons: [],
+        ...meta
+      };
+    })
+    .sort((a: CourseSection, b: CourseSection) => {
+      return a.order - b.order;
+    });
+}
+
+export function getCourseDetail(course: string): Course {
+  const courseMetadata = getCourseMetadata(course);
+  const sections = getAllCourseSections(course);
+  const slug = course;
+  const fullSlug = `/courses/${course}`;
+
+  sections.forEach((section) => {
+    const prefixPaths = path.join(root, 'data', ...section.path);
+    const files = getAllFilesRecursively(prefixPaths)
+
+    files.forEach((file) => {
+      // Replace is needed to work on Windows
+      const fileName = file.slice(prefixPaths.length + 1).replace(/\\/g, '/')
+      // // Remove Unexpected File
+      if (path.extname(fileName) !== '.md' && path.extname(fileName) !== '.mdx') {
+        return
+      }
+
+      const source = fs.readFileSync(file, 'utf8')
+      const meta = matter(source).data as LessonMetadata;
+
+
+      const slugParts = fileName.split("-");
+      const order = slugParts.shift() || 'a';
+
+      section.lessons.push({
+        ...meta,
+        order,
+        path: [...section.path, fileName],
+        slug: formatSlug(slugParts.join("-")),
+        fullSlug: `${section.fullSlug}/${formatSlug(slugParts.join("-"))}`,
       })
-    }
-  })
+    });
+  });
 
-  return allFrontMatter;
+  return {
+    ...courseMetadata,
+    path: ['courses', course],
+    slug,
+    fullSlug,
+    sections
+  };
+}
+
+export function getLesson(course: string, section: string, slug: string) {
+  return {}
+
 }

@@ -39,16 +39,13 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex sm:hidden items-center justify-center mt-5">
+        {/* <div className="flex sm:hidden items-center justify-center mt-5">
           <Link href="/" aria-label={siteMetadata.siteName}>
-            {/* <div className="mr-3">
-                <Logo />
-              </div> */}
             <div className="text-2xl font-semibold">
               {siteMetadata.siteName}
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
