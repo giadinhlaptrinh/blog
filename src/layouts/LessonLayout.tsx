@@ -157,7 +157,7 @@ export default function LessonLayout({
 
                   <div className="grid grid-cols-12 lg:grid-cols-8 xl:grid-cols-10">
                     <section className="px-4 pb-8 col-start-1 col-span-12 md:col-start-2 md:col-span-10 lg:col-start-2 lg:col-span-6 xl:col-start-3 xl:col-span-6">
-                      <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+                      <div className="prose prose-lg max-w-none pt-10 pb-8 dark:prose-dark">
                         {children}
                       </div>
                     </section>

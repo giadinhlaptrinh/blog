@@ -36,7 +36,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-10 gap-y-10 md:gap-y-12 ">
             {!posts.length && "No posts found."}
             {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-              const { slug, date, title, summary, tags } = frontMatter;
+              const { slug, date, title, summary, tags, images } = frontMatter;
 
               return (
                 <li key={slug} className="">
@@ -49,7 +49,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
                         <div className="rounded-md border border-gray-200 overflow-hidden">
                           <Image
                             alt=""
-                            src={"/static/images/canada/jU_IIoA2k.jpg"}
+                            src={images[0]}
                             className="object-cover object-center h-52 md:h-72 lg:h-56 xl:h-64"
                             width={700}
                             height={800}

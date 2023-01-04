@@ -7,37 +7,17 @@
       <language>en-us</language>
       <managingEditor>truonghungit@gmail.com (truonghungit)</managingEditor>
       <webMaster>truonghungit@gmail.com (truonghungit)</webMaster>
-      <lastBuildDate>Sun, 01 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 04 Jan 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://giadinhlaptrinh.com/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>https://giadinhlaptrinh.com/blog/frontend-developer-roadmap-in-2023</guid>
-    <title>Lộ trình để trở thành 1 Frontend Developer năm 2023 cho người mới bắt đầu</title>
-    <link>https://giadinhlaptrinh.com/blog/frontend-developer-roadmap-in-2023</link>
-    undefined
-    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <guid>https://giadinhlaptrinh.com/blog/javascript-null-vs-undefined</guid>
+    <title>Sự giống - khác nhau giữa Null và Undefined trong JavaScript</title>
+    <link>https://giadinhlaptrinh.com/blog/javascript-null-vs-undefined</link>
+    <description>Anh em muốn biết sự khác nhau giữa Null và Undefined trong JavaScript là gì không nào?</description>
+    <pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate>
     <author>truonghungit@gmail.com (truonghungit)</author>
-    <category>guide</category>
-  </item>
-
-  <item>
-    <guid>https://giadinhlaptrinh.com/blog/guide-to-using-images-in-nextjs</guid>
-    <title>Images in Next.js</title>
-    <link>https://giadinhlaptrinh.com/blog/guide-to-using-images-in-nextjs</link>
-    <description>In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component.</description>
-    <pubDate>Wed, 11 Nov 2020 00:00:00 GMT</pubDate>
-    <author>truonghungit@gmail.com (truonghungit)</author>
-    <category>next js</category><category>guide</category>
-  </item>
-
-  <item>
-    <guid>https://giadinhlaptrinh.com/blog/github-markdown-guide</guid>
-    <title>Markdown Guide</title>
-    <link>https://giadinhlaptrinh.com/blog/github-markdown-guide</link>
-    <description>Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown.</description>
-    <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
-    <author>truonghungit@gmail.com (truonghungit)</author>
-    <category>github</category><category>guide</category>
+    <category>javascript</category>
   </item>
 
     </channel>

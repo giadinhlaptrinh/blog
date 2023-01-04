@@ -1,0 +1,75 @@
+---
+title: "Sự giống - khác nhau giữa Null và Undefined trong JavaScript"
+description: "Hiểu rõ sự giống - khác nhau giữa Null và Undefined trong JavaScript qua những ví dụ đơn giản"
+date: "2023-01-04"
+tags: ["javascript"]
+images: ["/static/images/posts/javascript-null-vs-undefined/thumb.png"]
+draft: false
+summary: "Anh em muốn biết sự khác nhau giữa Null và Undefined trong JavaScript là gì không nào?"
+---
+
+Có thể anh em cũng không cần phải đọc hết bài viết này, mà thông qua hình ảnh sau, cũng phần nào đó giúp anh em hiểu được sự giống và khác nhau giữa `null` và `undefined`.
+
+![Giống và khác nhau giữa null và undefined](/static/images/posts/javascript-null-vs-undefined/toilet-tissue-holder-null-vs-undefined.png)
+
+đã học Javascript được vài tháng nhưng tôi vẫn không phân biệt được null và undefined. Điều này nghe có vẻ ngớ ngẩn, tôi biết. Vì vậy, trong bài viết này, tôi quyết định đi sâu vào sự khác biệt giữa hai loại này.
+
+Trước khi bắt đầu đi sâu vào tìm hiểu, chúng ta phải biết rằng trong JavaScript có **7** kiểu dữ liệu nguyên thủy (**primitive data types**):
+
+- string
+- number
+- bigint
+- boolean
+- undefined
+- null
+- symbol
+
+Và có **6** giá trị `falsy` thường được biết đến trong Javascript, đó là::
+
+- false
+- số 0 và -0
+- các chuỗi rỗng (empty string values)
+- null
+- undefined
+- NaN
+
+## Null
+
+Theo [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null),
+cũng như định nghĩa của [ECMAScript](https://tc39.es/ecma262/multipage/overview.html#sec-null-value) thì `null` đại diện cho giá trị không tồn tại.
+
+`null` phải được chỉ định - có nghĩa là chúng ta phải gán `null` cho biến (variable).
+
+Ví dụ:
+
+```javascript
+let a = null;
+console.log(a);
+// null
+
+console.log(typeof a);
+// object
+```
+
+## Undefined
+
+`Undefined` thường có nghĩa là một biến (variable) đã được khai báo, nhưng không được xác định - chưa được gán giá trị.
+
+Ví dụ:
+
+```javascript
+let b;
+console.log(b);
+// undefined
+
+console.log(typeof b);
+// undefined
+```
+
+Đương nhiên là anh em chúng ta có thể chỉ định (set) biến (variable) = `undefined` một cách rõ ràng như thế này
+
+```javascript
+let c = undefined;
+console.log(c);
+// undefined
+```

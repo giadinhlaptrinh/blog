@@ -44,7 +44,7 @@ export type PostMetadata = {
    * if none provided defaults to socialBanner in siteMetadata config
    * example: images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
    */
-  images?: Array<string>;
+  images: Array<string>;
 
   /**
    * List which should correspond to the file names in `data/authors`.
