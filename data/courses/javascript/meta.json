@@ -1,6 +1,7 @@
 {
   "title": "Khóa học JavaScript",
   "description": "Khoa hoc JavaScript hihi",
-  "shortDescription": "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.",
+  "shortDescription": "Sắp có",
+  "draft": true,
   "image": "/static/images/time-machine.jpg"
 }

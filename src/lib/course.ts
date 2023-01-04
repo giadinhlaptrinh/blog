@@ -45,17 +45,19 @@ export function getAllCourses(): Array<Course> {
   const coursesPath = path.join(root, 'data', "courses");
   const files = fs.readdirSync(coursesPath);
 
-  return files.map((file) => {
-    const meta = getCourseMetadata(file);
+  return files
+    .map((file) => {
+      const meta = getCourseMetadata(file);
 
-    return {
-      slug: formatSlug(file),
-      fullSlug: `/courses/${formatSlug(file)}`,
-      path: ['courses', file],
-      sections: [],
-      ...meta,
-    };
-  })
+      return {
+        slug: formatSlug(file),
+        fullSlug: `/courses/${formatSlug(file)}`,
+        path: ['courses', file],
+        sections: [],
+        ...meta,
+      };
+    })
+    .filter(course => !course.draft);
 }
 
 export function getAllCourseSections(course: string): Array<CourseSection> {
@@ -144,9 +146,6 @@ export async function getLesson(courseSlug: string, sectionSlug: string, lessonS
 
   const source = fs.readFileSync(mdxPath, 'utf8');
 
-
-  console.log("source", source);
-
   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
   if (process.platform === 'win32') {
     process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'esbuild.exe')
@@ -192,16 +191,13 @@ export async function getLesson(courseSlug: string, sectionSlug: string, lessonS
         '.js': 'jsx',
       };
 
-      // console.log("target", options.target);
-
-      // options.target = ["es2020"];
-
       return options
     },
   });
 
   return {
     mdxSource: code,
+    course,
     toc,
     ...frontmatter,
     frontMatter: {

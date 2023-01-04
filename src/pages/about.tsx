@@ -16,7 +16,6 @@ export async function getStaticProps() {
 }
 
 const About: NextPage<AboutPageProps> = ({ authorDetails }) => {
-  console.log(authorDetails);
   const { mdxSource, frontMatter } = authorDetails;
 
   return (

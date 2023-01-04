@@ -8,14 +8,14 @@ import ThemeSwitch from "./ThemeSwitch";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between py-8 md:py-10 border-b border-gray-200 dark:border-slate-700">
+    <header className="flex items-center justify-between py-6 shadow dark:border-slate-700">
       <div className="container">
         <div className="px-4 flex items-center justify-between">
           <MobileNav />
           <Link href="/" aria-label={siteMetadata.siteName}>
             <div className="flex items-center justify-between">
               <div className="mr-3">
-                <Logo className="h6" />
+                <Logo />
               </div>
               <div className="hidden sm:block text-2xl font-semibold">
                 {siteMetadata.siteName}

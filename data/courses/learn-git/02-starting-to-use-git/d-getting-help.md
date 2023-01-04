@@ -20,7 +20,7 @@ Ví dụ: chúng ta có thể xem trợ giúp cho command `git config` bằng c�
 git config -help
 ```
 
-![Image](./images/lessons/02-starting-to-use-git/git-help.png)
+![Image](/static/images/courses/learn-git/02-starting-to-use-git/git-help.png)
 
 Chúng ta cũng có thể sử dụng `-h` thay cho `-help`
 
@@ -29,7 +29,7 @@ Ví dụ:
 git commmit -h
 ```
 
-![Image](./images/lessons/02-starting-to-use-git/git-commit-help.png)
+![Image](/static/images/courses/learn-git/02-starting-to-use-git/git-commit-help.png)
 
 > 💡Sử dụng `git command --help` để mở hướng dẫn trên Browser (Trình duyệt)
 
@@ -39,7 +39,7 @@ Ví dụ:
 git commmit --help
 ```
 
-![Image](./images/lessons/02-starting-to-use-git/git-commit-help-page.png)
+![Image](/static/images/courses/learn-git/02-starting-to-use-git/git-commit-help-page.png)
 
 ## Xem tất cả các commands
 Để xem tất cả các commands trong Git, chúng ta có thể sử dụng `git help --all` hoặc `git help -a`
@@ -50,7 +50,7 @@ Ví dụ:
 git help --all
 ```
 
-![Image](./images/lessons/02-starting-to-use-git/git-help-all.png)
+![Image](/static/images/courses/learn-git/02-starting-to-use-git/git-help-all.png)
 
 > 💡 Sử dụng `git help --all` sẽ hiển thị một danh sách rất dài các commands.
 Sử dụng phím `enter` để xem thêm, sử dụng tổ hợp phím `Shift + g` để đi đến cuối danh sách hoặc sử dụng phím `q` để thoát.

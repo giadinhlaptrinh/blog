@@ -48,7 +48,7 @@ const Courses: NextPage<CoursesPageProps> = ({ courses }) => {
                   <Image
                     alt={c.title}
                     src={c.image}
-                    className="object-cover object-center w-full h-60 sm:h-72 md:h-80 lg:h-80 xl:h-96"
+                    className="object-cover object-center w-full h-60 sm:h-72 md:h-72 lg:h-80"
                     width={644}
                     height={400}
                   />

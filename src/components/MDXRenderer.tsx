@@ -31,7 +31,6 @@ type MDXRendererWrapperProps = {
 };
 
 const MDXRendererWrapper = ({ layout, ...rest }: any) => {
-  console.log("MDXRendererWrapper", rest);
   switch (layout) {
     case "AuthorLayout":
       return <AuthorLayout {...rest} />;

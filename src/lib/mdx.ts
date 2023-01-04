@@ -98,10 +98,6 @@ export async function getFileBySlug(type: string, slug: string): Promise<MdxData
         '.js': 'jsx',
       };
 
-      // console.log("target", options.target);
-
-      // options.target = ["es2020"];
-
       return options
     },
   });

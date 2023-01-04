@@ -1,6 +1,5 @@
 import MDXRenderer from "@/components/MDXRenderer";
 import { getAllCourses, getCourseDetail, getLesson } from "@/lib/course";
-import { formatSlug, getFileBySlug, getFiles } from "@/lib/mdx";
 import { CourseLesson } from "@/types/course";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
@@ -46,8 +45,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { course, section, slug } = params as LessonPageParams;
   const lesson = await getLesson(course, section, slug);
 
-  console.log("params", course, section, slug);
-
   return {
     props: {
       lesson,
@@ -56,18 +53,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const LessonPage: NextPage<LessonPageProps> = ({ lesson }) => {
-  console.log("lesson", lesson);
-  const { mdxSource, toc, frontMatter } = lesson as any;
+  const { mdxSource, toc, frontMatter, course } = lesson as any;
+
   return (
     <>
-      <>
-        <MDXRenderer
-          toc={toc}
-          mdxSource={mdxSource}
-          frontMatter={frontMatter}
-          layout={COURSE_LESSON_LAYOUT}
-        />
-      </>
+      <MDXRenderer
+        toc={toc}
+        course={course}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+        layout={COURSE_LESSON_LAYOUT}
+      />
     </>
   );
 };

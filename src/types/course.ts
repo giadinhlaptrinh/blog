@@ -38,6 +38,9 @@ export type CourseMetadata = {
   description: string;
   shortDescription: string;
   image: string;
+  draft: boolean;
+  skills: Array<string>;
+  requiredSkills: Array<string>;
   languages?: Array<string>;
 };
 

@@ -1,12 +1,14 @@
-<svg width="40" height="40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="400" height="400" rx="40" fill="#1098FF"/>
-<circle cx="110" cy="80" r="20" fill="white"/>
-<path d="M46 186C46 226.843 62.225 266.014 91.1056 294.894C119.986 323.775 159.157 340 200 340C240.843 340 280.014 323.775 308.894 294.894C337.775 266.014 354 226.843 354 186L313.979 186C313.979 216.229 301.971 245.22 280.595 266.595C259.22 287.971 230.229 299.979 200 299.979C169.771 299.979 140.78 287.971 119.405 266.595C98.0293 245.22 86.0208 216.229 86.0208 186L46 186Z" fill="white"/>
-<circle cx="66" cy="187" r="20" fill="white"/>
-<circle cx="334" cy="184" r="20" fill="white"/>
-<circle cx="280" cy="184" r="20" fill="white"/>
-<rect x="280" y="164" width="55" height="40" fill="white"/>
-<circle cx="220" cy="80" r="20" fill="white"/>
-<circle cx="290" cy="80" r="20" fill="white"/>
-<rect x="220" y="60" width="70" height="40" fill="white"/>
+<svg width="36" height="36" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" rx="40" fill="#1098FF" />
+  <circle cx="110" cy="80" r="20" fill="white" />
+  <path
+    d="M46 186C46 226.843 62.225 266.014 91.1056 294.894C119.986 323.775 159.157 340 200 340C240.843 340 280.014 323.775 308.894 294.894C337.775 266.014 354 226.843 354 186L313.979 186C313.979 216.229 301.971 245.22 280.595 266.595C259.22 287.971 230.229 299.979 200 299.979C169.771 299.979 140.78 287.971 119.405 266.595C98.0293 245.22 86.0208 216.229 86.0208 186L46 186Z"
+    fill="white" />
+  <circle cx="66" cy="187" r="20" fill="white" />
+  <circle cx="334" cy="184" r="20" fill="white" />
+  <circle cx="280" cy="184" r="20" fill="white" />
+  <rect x="280" y="164" width="55" height="40" fill="white" />
+  <circle cx="220" cy="80" r="20" fill="white" />
+  <circle cx="290" cy="80" r="20" fill="white" />
+  <rect x="220" y="60" width="70" height="40" fill="white" />
 </svg>

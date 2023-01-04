@@ -2,7 +2,7 @@
 title: "Giới thiệu khóa học"
 ---
 
-![Intro](./images/cover-v2.png)
+![Intro](/static/images/courses/learn-git/cover.png)
 
 
 ### Khóa học Git và Github từ căn bản đến nâng cao cho người mới bắt đầu
